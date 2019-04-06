@@ -10,3 +10,18 @@ db.users.insert([{'name': 'mario', 'age': 36}, {'name': 'mat', 'age': 23}, {'nam
 db.users.find()
 db.users.find({'name': 'mario'})
 db.users.find({'age': 23})
+
+db.users.find({'age': 23, 'name': 'cody'})
+db.users.find({'age': null})
+db.users.find({'age': {$gt:25}})
+db.users.find({'age': {$lt:25}})
+
+db.users.find()
+db.users.update({'name': 'james'}, {'name': 'james', 'age': 36})
+db.users.find()
+db.users.update({'name': 'mario'}, {'name': 'mario', 'age': 66})
+db.users.find()
+
+db.users.remove({'name': 'james', 'age': 66})
+db.users.remove({'age': 23})
+db.users.remove({})
