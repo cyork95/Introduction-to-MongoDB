@@ -1,0 +1,8 @@
+show dbs
+use test
+show collections
+db.createCollection('users')
+show collections
+db.users.insert({'name': 'james'})
+db.users.insert({'name': 'julia', 'age': 24})
+db.users.insert([{'name': 'mario', 'age': 36}, {'name': 'mat', 'age': 23}, {'name': 'cody', 'age': 23}, {'name': 'dolly', 'age': 45}])
